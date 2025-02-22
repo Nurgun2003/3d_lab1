@@ -122,6 +122,44 @@
                         </Transform3DGroup>
                     </ModelVisual3D.Transform>
                 </mycode:Cube3D>
+                <mycode:Tetrahedron x:Name="Tetrahedron"
+                                    Size="0.2"
+                                    Position="0.7,0,0"
+                                    Front="#9acd32"
+                                    Left="#696969"
+                                    Bottom="#8a2be2"
+                                    Right="#e6e6fa">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="30" 
+                                    x:Name="rotateX2"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="30" 
+                                    x:Name="rotateY2"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="30" 
+                                    x:Name="rotateZ2"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D x:Name="myTranslateTransform12"
+                                                  OffsetX="0.3" OffsetY="0" OffsetZ="3" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Tetrahedron>
             </Viewport3D.Children>
         </Viewport3D>
         <Grid.Triggers>
