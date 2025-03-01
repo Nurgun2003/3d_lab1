@@ -160,6 +160,48 @@
                         </Transform3DGroup>
                     </ModelVisual3D.Transform>
                 </mycode:Tetrahedron>
+                <mycode:Octahedron x:Name="Octahedron"
+                                   Size="0.2"
+                                   Position="0.7,0,0"
+                                   FrontLeftTop="#9acd32"
+                                   FrontRightTop="#696969"
+                                   FrontLeftBottom="#8a2be2"
+                                   FrontRightBottom="#e6e6fa"
+                                   BackLeftTop="#9acd32"
+                                   BackRightTop="#696969"
+                                   BackLeftBottom="#8a2be2"
+                                   BackRightBottom="#e6e6fa">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="30" 
+                                    x:Name="rotateX3"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="30" 
+                                    x:Name="rotateY3"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="30" 
+                                    x:Name="rotateZ3"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D x:Name="myTranslateTransform13"
+                                                  OffsetX="0" OffsetY="0" OffsetZ="3" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Octahedron>
             </Viewport3D.Children>
         </Viewport3D>
         <Grid.Triggers>

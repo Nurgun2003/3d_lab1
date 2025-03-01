@@ -29,7 +29,7 @@ namespace lab1.My
                 Draw(_size, _pos, _front, _left, _right, _bottom);
             }
         }
-        //положение центра фигуры
+        //положение центра тетраэдра
         private Point3D _pos;
         public Point3D Position
         {
