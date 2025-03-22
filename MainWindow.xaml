@@ -202,6 +202,40 @@
                         </Transform3DGroup>
                     </ModelVisual3D.Transform>
                 </mycode:Octahedron>
+                <mycode:Icosahedron x:Name="Icosahedron"
+                                   Size="0.2"
+                                   Position="0.5,0,0">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="0" 
+                                    x:Name="rotateX4"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="20" 
+                                    x:Name="rotateY4"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="0">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="0" 
+                                    x:Name="rotateZ4"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D x:Name="myTranslateTransform14"
+                                                  OffsetX="0" OffsetY="0" OffsetZ="3" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Icosahedron>
             </Viewport3D.Children>
         </Viewport3D>
         <Grid.Triggers>
