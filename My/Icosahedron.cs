@@ -28,7 +28,7 @@ namespace lab1.My
                 Draw(_size, _pos);
             }
         }
-        //положение центра октаэдра
+        //положение центра икосаэдра
         private Point3D _pos;
         public Point3D Position
         {
@@ -75,15 +75,15 @@ namespace lab1.My
             {
                 new Point3D(pos.X, pos.Y + absY, pos.Z),
                 new Point3D(pos.X + absX * Math.Sin(d), pos.Y + absY * Math.Cos(d), pos.Z),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(8 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(8 * Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(6 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(6 * Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(4 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(4 * Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(2 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(2 * Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(3 * Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z - absZ * Math.Cos(d) * Math.Sin(3 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(2 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Sin(d) * Math.Sin(2 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(4 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z - absZ * Math.Sin(d) * Math.Sin(4 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(4 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z + absZ * Math.Sin(d) * Math.Sin(4 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(2 * Math.PI / 5), pos.Y + absY * Math.Cos(d), pos.Z + absZ * Math.Sin(d) * Math.Sin(2 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z - absZ * Math.Sin(d) * Math.Sin(Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(3 * Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z - absZ * Math.Sin(d) * Math.Sin(3 * Math.PI / 5)),
                 new Point3D(pos.X - absX * Math.Sin(d), pos.Y - absY * Math.Cos(d), pos.Z),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(3 * Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z + absZ * Math.Cos(d) * Math.Sin(3 * Math.PI / 5)),
-                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z + absZ * Math.Cos(d) * Math.Sin(Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(3 * Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z + absZ * Math.Sin(d) * Math.Sin(3 * Math.PI / 5)),
+                new Point3D(pos.X + absX * Math.Sin(d) * Math.Cos(Math.PI / 5), pos.Y - absY * Math.Cos(d), pos.Z + absZ * Math.Sin(d) * Math.Sin(Math.PI / 5)),
                 new Point3D(pos.X, pos.Y - absY, pos.Z)
             };
             Model3DGroup m3dg = new Model3DGroup();
@@ -116,19 +116,19 @@ namespace lab1.My
             m3dg.Children.Add(face);
             // 7
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[10], points[2], points[1], material);
+            face = AddFace(points[6], points[2], points[1], material);
             m3dg.Children.Add(face);
             // 8
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[2], points[9], points[10], material);
+            face = AddFace(points[2], points[6], points[7], material);
             m3dg.Children.Add(face);
             // 9
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[9], points[3], points[2], material);
+            face = AddFace(points[7], points[3], points[2], material);
             m3dg.Children.Add(face);
             // 10
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[3], points[8], points[9], material);
+            face = AddFace(points[3], points[7], points[8], material);
             m3dg.Children.Add(face);
             // 11
             material = new DiffuseMaterial(RandBrush());
@@ -136,19 +136,19 @@ namespace lab1.My
             m3dg.Children.Add(face);
             // 12
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[4], points[7], points[8], material);
+            face = AddFace(points[4], points[8], points[9], material);
             m3dg.Children.Add(face);
             // 13
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[7], points[5], points[4], material);
+            face = AddFace(points[9], points[5], points[4], material);
             m3dg.Children.Add(face);
             // 14
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[5], points[6], points[7], material);
+            face = AddFace(points[5], points[9], points[10], material);
             m3dg.Children.Add(face);
             // 15
             material = new DiffuseMaterial(RandBrush());
-            face = AddFace(points[6], points[1], points[5], material);
+            face = AddFace(points[10], points[1], points[5], material);
             m3dg.Children.Add(face);
             // Нижняя часть
             // 16
@@ -174,9 +174,9 @@ namespace lab1.My
             //Сохранение данных объекта
             Content = m3dg;
         }
+        private Random rnd = new Random();
         private Brush RandBrush()
         {
-            Random rnd = new Random();
             return new SolidColorBrush(Color.FromRgb((byte)rnd.Next(), (byte)rnd.Next(), (byte)rnd.Next()));
         }
     }
