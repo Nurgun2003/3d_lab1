@@ -1,0 +1,329 @@
+﻿<Window x:Class="lab1.House"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab1"
+        xmlns:mycode="clr-namespace:lab1.My"
+        mc:Ignorable="d"
+        Title="House" Height="450" Width="800">
+    <Grid>
+        <Viewport3D>
+            <Viewport3D.Camera>
+                <!--Установка камеры - перспективная проекция-->
+                <PerspectiveCamera Position="10,2,10" LookDirection="-2,0,-2" />
+            </Viewport3D.Camera>
+            <Viewport3D.Children>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <!--Установка освещения - прямой свет-->
+                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+                <mycode:Parallelepiped x:Name="Floor"
+                                       Length="5"
+                                       Width="3"
+                                       Height="0.1"
+                                       Color="Gray" />
+                <mycode:Parallelepiped x:Name="Wall1"
+                                       Length="2"
+                                       Width="0.1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall1"
+                                          OffsetX="-1.5" OffsetY="0.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall2"
+                                       Length="2"
+                                       Width="0.1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall2"
+                                          OffsetX="1.5" OffsetY="0.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall3"
+                                       Length="5"
+                                       Width="0.1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall3"
+                                          OffsetX="0" OffsetY="0.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall4"
+                                       Length="0.1"
+                                       Width="3"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall4"
+                                          OffsetX="-2.45" OffsetY="0.55" OffsetZ="0" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall5"
+                                       Length="0.1"
+                                       Width="3"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall5"
+                                          OffsetX="2.45" OffsetY="0.55" OffsetZ="0" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall6"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall6"
+                                          OffsetX="-2.25" OffsetY="1.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall7"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall7"
+                                          OffsetX="-0.75" OffsetY="1.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall8"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall8"
+                                          OffsetX="2.25" OffsetY="1.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall9"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall9"
+                                          OffsetX="0.75" OffsetY="1.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall10"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall10"
+                                          OffsetX="-2.25" OffsetY="1.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall11"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall11"
+                                          OffsetX="-0.75" OffsetY="1.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall12"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall12"
+                                          OffsetX="2.25" OffsetY="1.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall13"
+                                       Length="0.5"
+                                       Width="0.1"
+                                       Height="1.01"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall13"
+                                          OffsetX="0.75" OffsetY="1.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall14"
+                                       Length="0.1"
+                                       Width="1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall14"
+                                          OffsetX="-2.45" OffsetY="1.55" OffsetZ="1" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall15"
+                                       Length="0.1"
+                                       Width="1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall15"
+                                          OffsetX="-2.45" OffsetY="1.55" OffsetZ="-1" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall16"
+                                       Length="0.1"
+                                       Width="1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall16"
+                                          OffsetX="2.45" OffsetY="1.55" OffsetZ="1" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall17"
+                                       Length="0.1"
+                                       Width="1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall17"
+                                          OffsetX="2.45" OffsetY="1.55" OffsetZ="-1" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall18"
+                                       Length="5"
+                                       Width="0.1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall18"
+                                          OffsetX="0" OffsetY="2.55" OffsetZ="1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall19"
+                                       Length="5"
+                                       Width="0.1"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall19"
+                                          OffsetX="0" OffsetY="2.55" OffsetZ="-1.45" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall20"
+                                       Length="0.1"
+                                       Width="3"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall20"
+                                          OffsetX="-2.45" OffsetY="2.55" OffsetZ="0" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Wall21"
+                                       Length="0.1"
+                                       Width="3"
+                                       Height="1"
+                                       Color="White">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <TranslateTransform3D x:Name="TranslateTransformWall21"
+                                          OffsetX="2.45" OffsetY="2.55" OffsetZ="0" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:TriangularPrism x:Name="Attic"
+                                        Point1="-2.5,3.05,1.5"
+                                        Point2="-2.5,4.05,0"
+                                        Point3="-2.5,3.05,-1.5"
+                                        Height="5"
+                                        Color="#8B5A2B" />
+                <mycode:Parallelepiped x:Name="Roof1"
+                                       Length="6"
+                                       Width="2.6166"
+                                       Height="0.1"
+                                       Color="Gray">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D CenterY="-0.05" CenterZ="-1.2416">
+                                <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D
+                                    Axis="1,0,0"
+                                    Angle="33.333"
+                                    x:Name="RotateXRoof1" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D x:Name="TranslateTransformRoof1"
+                                          OffsetX="0" OffsetY="4.1" OffsetZ="1.2416" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+                <mycode:Parallelepiped x:Name="Roof2"
+                                       Length="6"
+                                       Width="2.6166"
+                                       Height="0.1"
+                                       Color="Gray">
+                    <ModelVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D CenterY="-0.05" CenterZ="1.2416">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D
+                                    Axis="1,0,0"
+                                    Angle="-33.333"
+                                    x:Name="RotateXRoof2" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D x:Name="TranslateTransformRoof2"
+                                          OffsetX="0" OffsetY="4.1" OffsetZ="-1.2416" />
+                        </Transform3DGroup>
+                    </ModelVisual3D.Transform>
+                </mycode:Parallelepiped>
+            </Viewport3D.Children>
+        </Viewport3D>
+    </Grid>
+</Window>
