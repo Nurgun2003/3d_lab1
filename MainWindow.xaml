@@ -20,10 +20,10 @@
                         <DirectionalLight Color="White" Direction="-1,-1,-2" />
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
-                <ModelVisual3D>
+                <!--<ModelVisual3D>
                     <ModelVisual3D.Content>
                         <GeometryModel3D>
-                            <!--Определяем геометрию объекта-->
+                            --><!--Определяем геометрию объекта--><!--
                             <GeometryModel3D.Geometry>
                                 <MeshGeometry3D Positions= "0,0,0 
                                                             1,0,0 
@@ -47,7 +47,7 @@
                                                                     3,6,7
                                 "/>
                             </GeometryModel3D.Geometry>
-                            <!--Установка материала - красный цвет-->
+                            --><!--Установка материала - красный цвет--><!--
                             <GeometryModel3D.Material>
                                 <DiffuseMaterial Brush="Red" />
                             </GeometryModel3D.Material>
@@ -121,10 +121,10 @@
                                                   OffsetX="0.3" OffsetY="0" OffsetZ="3" />
                         </Transform3DGroup>
                     </ModelVisual3D.Transform>
-                </mycode:Cube3D>
+                </mycode:Cube3D>-->
                 <mycode:Tetrahedron x:Name="Tetrahedron"
-                                    Size="0.2"
-                                    Position="0.7,0,0"
+                                    Size="0.3"
+                                    Position="-0.3,0,-0.9"
                                     Front="#9acd32"
                                     Left="#696969"
                                     Bottom="#8a2be2"
@@ -143,7 +143,7 @@
                                 <RotateTransform3D.Rotation>
                                     <AxisAngleRotation3D 
                                     Axis="0,1,0" 
-                                    Angle="30" 
+                                    Angle="60" 
                                     x:Name="rotateY2"/>
                                 </RotateTransform3D.Rotation>
                             </RotateTransform3D>
@@ -161,8 +161,8 @@
                     </ModelVisual3D.Transform>
                 </mycode:Tetrahedron>
                 <mycode:Octahedron x:Name="Octahedron"
-                                   Size="0.2"
-                                   Position="0.7,0,0"
+                                   Size="0.3"
+                                   Position="-0.1,0,-0.2"
                                    FrontLeftTop="#9acd32"
                                    FrontRightTop="#696969"
                                    FrontLeftBottom="#8a2be2"
@@ -185,7 +185,7 @@
                                 <RotateTransform3D.Rotation>
                                     <AxisAngleRotation3D 
                                     Axis="0,1,0" 
-                                    Angle="30" 
+                                    Angle="75" 
                                     x:Name="rotateY3"/>
                                 </RotateTransform3D.Rotation>
                             </RotateTransform3D>
@@ -203,8 +203,8 @@
                     </ModelVisual3D.Transform>
                 </mycode:Octahedron>
                 <mycode:Icosahedron x:Name="Icosahedron"
-                                   Size="0.2"
-                                   Position="0.5,0,0">
+                                   Size="0.3"
+                                   Position="0.2,0,0">
                     <ModelVisual3D.Transform>
                         <Transform3DGroup>
                             <RotateTransform3D CenterX="0">
@@ -237,8 +237,8 @@
                     </ModelVisual3D.Transform>
                 </mycode:Icosahedron>
                 <mycode:Dodecahedron x:Name="Dodecahedron"
-                                   Size="0.2"
-                                   Position="0.9,0,0">
+                                   Size="0.3"
+                                   Position="0.7,0,0">
                     <ModelVisual3D.Transform>
                         <Transform3DGroup>
                             <RotateTransform3D CenterX="0">

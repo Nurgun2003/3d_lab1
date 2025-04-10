@@ -120,15 +120,15 @@ namespace lab1.My
             double B = (point3.X - point1.X) * (point2.Z - point1.Z) - (point2.X - point1.X) * (point3.Z - point1.Z);
             double C = (point2.X - point1.X) * (point3.Y - point1.Y) - (point3.X - point1.X) * (point2.Y - point1.Y);
             double L = Math.Sqrt(A * A + B * B + C * C);
-            Point3D N = new Point3D(-A / L, -B / L, -C / L);
+            Point3D N = new Point3D(A / L, B / L, C / L); //нормаль основания
             Point3D[] points =
             {
                 point1,
                 point2,
                 point3,
-                new Point3D(point1.X + N.X * height, point1.Y + N.Y * height, point1.Z + N.Z * height),
-                new Point3D(point2.X + N.X * height, point2.Y + N.Y * height, point2.Z + N.Z * height),
-                new Point3D(point3.X + N.X * height, point3.Y + N.Y * height, point3.Z + N.Z * height)
+                new Point3D(point1.X - N.X * height, point1.Y - N.Y * height, point1.Z - N.Z * height),
+                new Point3D(point2.X - N.X * height, point2.Y - N.Y * height, point2.Z - N.Z * height),
+                new Point3D(point3.X - N.X * height, point3.Y - N.Y * height, point3.Z - N.Z * height)
             };
             Model3DGroup m3dg = new Model3DGroup();
             // Добавление граней

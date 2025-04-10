@@ -23,6 +23,10 @@ namespace lab1
         public MainWindow()
         {
             InitializeComponent();
+            Window other = new Other();
+            other.Show();
+            Window house = new House();
+            house.Show();
         }
     }
 }

@@ -68,7 +68,6 @@ namespace lab1.My
         }
         private void Draw(double radius, double thickness)
         {
-            // Отсчёт точек против часовой стрелки.
             Point3D[] points = new Point3D[64 * 64];
             for (int i = 0; i < 64; i++)
             {
